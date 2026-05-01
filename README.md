@@ -1,7 +1,7 @@
 
-# YakuzaXsilence
+# KyyProjects
 
-A high-performance, production-grade WhatsApp automation library built for reliability and scalability. YakuzaXsilence provides a robust abstraction layer over the Baileys protocol, ensuring seamless connectivity and advanced pairing mechanisms.
+A high-performance, production-grade WhatsApp automation library built for reliability and scalability. KyyProjects provides a robust abstraction layer over the Baileys protocol, ensuring seamless connectivity and advanced pairing mechanisms.
 
 ## Author
 
@@ -9,7 +9,7 @@ A high-performance, production-grade WhatsApp automation library built for relia
 
 ## Core Capabilities
 
-YakuzaXsilence is engineered to address common pain points in WhatsApp bot development, specifically session stability and authentication complexity. The library offers:
+KyyProjects is engineered to address common pain points in WhatsApp bot development, specifically session stability and authentication complexity. The library offers:
 
 - **Full Node.js Compatibility:** Explicit support for the latest Node.js versions (v18, v20, v22, and beyond) without dependency conflicts or native module warnings.
 - **Custom Pairing Interface:** A streamlined, programmable pairing method that bypasses QR code scanning, enabling deployment in headless server environments.
@@ -33,10 +33,10 @@ npm install yakuza-xsilence
 ### Standard QR Authentication
 
 ```typescript
-import YakuzaXsilence from 'yakuza-xsilence';
+import KyyProjects from 'yakuza-xsilence';
 
 async function startBot() {
-    const client = new YakuzaXsilence({
+    const client = new KyyProjects({
         printQRInTerminal: true
     });
 
@@ -58,12 +58,12 @@ startBot();
 This method is recommended for server deployments where scanning a QR code is not feasible. It utilizes the `customPairing` configuration to inject the code directly into the authentication flow.
 
 ```typescript
-import YakuzaXsilence from 'yakuza-xsilence';
+import KyyProjects from 'yakuza-xsilence';
 
 async function startWithPairingCode() {
     const phoneNumber = '6281234567890'; // International format without '+'
 
-    const client = new YakuzaXsilence({
+    const client = new KyyProjects({
         customPairing: {
             enabled: true,
             phoneNumber: phoneNumber,
@@ -80,7 +80,7 @@ async function startWithPairingCode() {
     client.ev.on('connection.update', (update) => {
         const { connection, lastDisconnect } = update;
         if (connection === 'close') {
-            // YakuzaXsilence will automatically attempt to reconnect using the saved session.
+            // KyyProjects will automatically attempt to reconnect using the saved session.
             console.log('Connection closed. Reconnecting automatically...');
         } else if (connection === 'open') {
             console.log('Client is ready.');
@@ -104,21 +104,21 @@ startWithPairingCode();
 | `authDir` | `string` | Custom directory path for session credential storage. | `./auth_info_yakuza` |
 | `retryRequestDelayMs` | `number` | Delay between reconnection attempts in milliseconds. | `3000` |
 | `maxRetries` | `number` | Maximum attempts to reconnect before throwing a fatal error. | `10` |
-| `browser` | `string[]` | Browser identifier sent to WhatsApp servers. | `['YakuzaXsilence', 'Chrome', '1.0.0']` |
+| `browser` | `string[]` | Browser identifier sent to WhatsApp servers. | `['KyyProjects', 'Chrome', '1.0.0']` |
 
 ## Session Persistence
 
-YakuzaXsilence automatically manages credential storage. To maintain state across server restarts, ensure the working directory is writable.
+KyyProjects automatically manages credential storage. To maintain state across server restarts, ensure the working directory is writable.
 
 ```typescript
-const client = new YakuzaXsilence({
+const client = new KyyProjects({
     authDir: './auth_state' // Custom directory for session storage
 });
 ```
 
 ## Event Handling
 
-YakuzaXsilence extends the standard Baileys event emitter. Common events include:
+KyyProjects extends the standard Baileys event emitter. Common events include:
 
 ```typescript
 client.ev.on('messages.upsert', async (m) => {
@@ -158,7 +158,7 @@ The anti-error mechanism is enabled by default and provides:
 | `Connection Closed` loop | Ensure `retryRequestDelayMs` is set to at least `3000` and `maxRetries` is sufficient. |
 | Pairing code not received | Verify phone number format (international, no '+' symbol) and check spam folder if using SMS. |
 | Session deleted on restart | Verify `authDir` path is absolute or relative to the correct working directory. |
-| `TypeError` on Node.js 16 | Upgrade Node.js to v18 or higher. YakuzaXsilence relies on modern `fetch` and `crypto` APIs. |
+| `TypeError` on Node.js 16 | Upgrade Node.js to v18 or higher. KyyProjects relies on modern `fetch` and `crypto` APIs. |
 
 ## Development
 
@@ -183,7 +183,7 @@ Contributions are welcome. Please ensure any pull requests maintain compatibilit
 
 ## Security
 
-YakuzaXsilence stores credentials locally in the `authDir` specified. It is the responsibility of the developer to secure this directory on production servers and to never commit `creds.json` files to public version control.
+KyyProjects stores credentials locally in the `authDir` specified. It is the responsibility of the developer to secure this directory on production servers and to never commit `creds.json` files to public version control.
 
 ## License
 
@@ -199,6 +199,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Acknowledgments
 
-YakuzaXsilence is built upon the foundational work of the Baileys library and the open-source WhatsApp protocol research community.
+KyyProjects is built upon the foundational work of the Baileys library and the open-source WhatsApp protocol research community.
 
 ## FORK AJA DASAR DEV RENAME BUDAK AI AWOKWOKWOWKWOWKOK
