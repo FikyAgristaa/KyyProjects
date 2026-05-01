@@ -25,7 +25,7 @@ KyyProjects is engineered to address common pain points in WhatsApp bot developm
 ## Installation
 
 ```bash
-npm install yakuza-xsilence
+npm install KyyProjects
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ npm install yakuza-xsilence
 ### Standard QR Authentication
 
 ```typescript
-import KyyProjects from 'yakuza-xsilence';
+import KyyProjects from 'KyyProjects';
 
 async function startBot() {
     const client = new KyyProjects({
@@ -58,7 +58,7 @@ startBot();
 This method is recommended for server deployments where scanning a QR code is not feasible. It utilizes the `customPairing` configuration to inject the code directly into the authentication flow.
 
 ```typescript
-import KyyProjects from 'yakuza-xsilence';
+import KyyProjects from 'KyyProjects';
 
 async function startWithPairingCode() {
     const phoneNumber = '6281234567890'; // International format without '+'
@@ -164,8 +164,8 @@ The anti-error mechanism is enabled by default and provides:
 
 ```bash
 # Clone the repository
-git clone https://github.com/KyyProjects/yakuza-xsilence.git
-cd yakuza-xsilence
+git clone https://github.com/FikyAgristaa/KyyProjects.git
+cd kyyprojects
 
 # Install dependencies
 npm install
