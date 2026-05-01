@@ -5,7 +5,7 @@ A high-performance, production-grade WhatsApp automation library built for relia
 
 ## Author
 
-**OmhcSilence**
+**KyyProjects**
 
 ## Core Capabilities
 
@@ -164,7 +164,7 @@ The anti-error mechanism is enabled by default and provides:
 
 ```bash
 # Clone the repository
-git clone https://github.com/OmhcSilence/yakuza-xsilence.git
+git clone https://github.com/KyyProjects/yakuza-xsilence.git
 cd yakuza-xsilence
 
 # Install dependencies
@@ -189,7 +189,7 @@ KyyProjects stores credentials locally in the `authDir` specified. It is the res
 
 MIT License
 
-Copyright (c) 2019 OmhcSilence
+Copyright (c) 2019 KyyProjects
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -201,4 +201,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 KyyProjects is built upon the foundational work of the Baileys library and the open-source WhatsApp protocol research community.
 
-## FORK AJA DASAR DEV RENAME BUDAK AI AWOKWOKWOWKWOWKOK
+## FORK MODAL RINEM JADI DEV AKWOKAOKW, BUDAK AI
